@@ -1,0 +1,125 @@
+.SearchBox{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* SearchBox.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* Styled to match the card */
+.SearchBox {
+    background-color: #ffffff;
+    border-radius: 12px;  /* Similar to card border radius */
+    padding: 20px;
+    width: 345px;  /* Match width of the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Soft shadow similar to card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+
+.SearchBox h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;  /* Larger margin for spacing */
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e0e0e0;  /* Matches the card typography style */
+    padding-bottom: 10px;
+}
+
+/* Flexbox for input and button in one line */
+.SearchBox form {
+    display: flex;
+    gap: 10px;  /* Space between input and button */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SearchBox #city {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;  /* Slightly larger font */
+    border: 1px solid #e0e0e0;  /* Subtle border to match input field style */
+    outline: none;
+}
+
+.SearchBox #city:focus {
+    border-color: #66bb6a;  /* Green border on focus */
+    background-color: #fff;  /* Bright background on focus */
+}
+
+/* Button styling */
+.SearchBox .MuiButton-root {
+    background-color: #66bb6a !important;
+    color: white;
+    padding: 8px 14px;  /* Balanced button padding */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 6px;
+    min-width: 90px;  /* Minimum width to balance with input */
+}
+
+
+/* Error message */
+.SearchBox p {
+    color: #e57373;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #ffebee;
+    border-radius: 6px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .SearchBox {
+        width: 85%;
+    }
+
+    .SearchBox h3 {
+        font-size: 18px;
+    }
+
+    .SearchBox form {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .SearchBox {
+        padding: 15px;
+    }
+
+    .SearchBox h3 {
+        font-size: 16px;
+    }
+
+    .MuiButton-root {
+        padding: 8px;
+        width: 100%;  /* Full width button on mobile */
+    }
+}

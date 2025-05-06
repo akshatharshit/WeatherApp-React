@@ -1,0 +1,132 @@
+
+.info-box{
+   text-align: center;
+}
+
+/* SearchBox.css */
+
+.SearchBox {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.SearchBox {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px; /* Reduced padding */
+    width: 300px; /* Adjusted width to be smaller */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SearchBox:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.SearchBox h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.SearchBox form {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.SearchBox #city {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 8px; /* Reduced padding */
+}
+
+.MuiInputBase-input {
+    padding: 6px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+}
+
+.MuiInputLabel-root {
+    color: #8c8c8c !important;
+    font-size: 14px;
+}
+
+.MuiOutlinedInput-root {
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #66bb6a !important;
+    }
+}
+
+.SearchBox .MuiButton-root {
+    background-color: #66bb6a !important;
+    color: white;
+    padding: 8px 10px; /* Reduced padding */
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 6px;
+    min-width: 70px; /* Adjusted minimum width */
+}
+
+.SearchBox .MuiButton-root:hover {
+    background-color: #4caf50 !important;
+    transform: translateY(-2px);
+}
+
+.SearchBox p {
+    color: #e57373;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #ffebee;
+    border-radius: 6px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .SearchBox {
+        width: 85%;
+    }
+
+    .SearchBox h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .SearchBox {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .SearchBox h3 {
+        font-size: 14px;
+    }
+
+    .MuiButton-root {
+        padding: 6px; /* Smaller button padding */
+    }
+}
